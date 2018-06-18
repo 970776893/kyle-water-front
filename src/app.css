@@ -1,0 +1,115 @@
+html, body {
+  background-color: #eeeeee;
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover{
+  cursor:pointer
+}
+/*-------------------------- 一直旋转动画 start --------------------------*/
+@keyframes rotating         { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@-moz-keyframes rotating    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@-webkit-keyframes rotating { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@-o-keyframes rotating      { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+.glyphicon-rotating {
+  animation:          rotating 2s linear infinite;
+  -moz-animation:     rotating 2s linear infinite;
+  -webkit-animation:  rotating 2s linear infinite;
+  -o-animation:       rotating 2s linear infinite;
+}
+/*-------------------------- 一直旋转动画 end --------------------------*/
+
+/* --------------------------输入框组 start---------------------------*/
+.form-group-search {
+  max-width: 330px;
+}
+.form-group-search label{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.form-group-search div{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* --------------------------输入框组 end---------------------------*/
+
+/* ------------------------ 内容页导航 start -----------------------*/
+.body-nav {
+  padding: 5px 20px 5px 20px;  
+  background-color: white; 
+  margin-bottom: 15px;
+  border-left: 3px solid red;
+  border-radius: 0px;
+}
+/* ------------------------ 内容页导航 end -----------------------*/
+
+/*col 和 input-group组合时 增加如下*/
+.input-group-padding {
+  float: left !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/*from之后的输入框 错误提示框*/
+.form-group .message {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.form-group .message label{
+  font-weight: normal;
+  text-align: left;
+  font-size: 12px;
+}
+
+.panel-border {
+  border: 1px solid #E6E9ED;
+  border-radius: 5px;
+}
+
+.panel-heading .breadcrumb {
+  margin-bottom: 0px;
+  background: transparent;
+  display: inline-block;
+}
+
+.panel-primary .panel-heading a {
+  color: white;
+}
+.panel-heading .breadcrumb .active {
+  color: #dadada;
+}
+.panel .panel-tools {
+  display: inline-block;
+  float: right;
+  padding: 8px 15px;
+ 
+}
+.panel .panel-tools .tools-item {
+  display: inline-block;
+  cursor:pointer;
+}
+
+.panel .panel-tools .tools-item+.tools-item {
+  padding-left: 8px;
+}
+
+.tools-item .tools-collapse-icon[aria-expanded="true"] span{
+  transition: transform 1ms;
+  transform:rotate(-90deg);
+}
+
+.tools-item .tools-collapse-icon[aria-expanded="false"] span{
+  transform:rotate(0deg);
+  transition: transform 1ms;
+}
+
+.dialog-mask {
+  background-color: rgba(0, 0, 0, .5);
+  display: block;
+  transition: opacity .3s ease;
+}
+
+
