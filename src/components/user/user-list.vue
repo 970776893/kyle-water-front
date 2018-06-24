@@ -141,7 +141,6 @@ export default {
         const data = res.body.data
         this.page.total = data.total
         this.dataset = data.itemList
-        
       }, function(rej) {
         this.querying = false
         console.log(rej)

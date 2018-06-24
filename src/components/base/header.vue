@@ -46,8 +46,8 @@
     },
     computed: {
       userIcon () {
-        var userInfo = JSON.parse(this.$cookie.get('userInfo'))
-        return userInfo.pictureUrl ? userInfo.pictureUrl : loginIcon
+        var userInfo = JSON.parse(this.$cookie.get('sessionj'))
+        return (userInfo && userInfo.pictureUrl) ? userInfo.pictureUrl : loginIcon
       }
     },
     methods: {

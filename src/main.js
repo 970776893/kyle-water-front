@@ -46,12 +46,12 @@ Vue.http.interceptors.push((request, next) => {
   request.headers.set('Content-Type', 'application/json;charset=UTF-8')
   // continue to next interceptor
   next((response) => {
-    console.log(response)
+    console.log(this)
     if (response.ok) {
       if (response.body.code === 10001) {
-        vm.$cookie.delete('session')
+        vm.$cookie.delete('sessionj')
       }
-      if(response.body.code !== 200) {
+      if (response.body.code !== 200) {
         response.ok = false
         response.status = 500
       }

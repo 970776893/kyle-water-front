@@ -24,15 +24,15 @@
 
 .layout-body .body-left{
   float: left;
-  padding : 10px 10px 10px 2px;
+  padding : 10px 5px 10px 5px;
   margin: 0px;
-  width: 16%;
+  width: 18%;
 }
 
 .layout-body .body-right{
-  padding : 10px 2px 10px 25px;
+  padding : 10px 5px 10px 5px;
   float: right;
-  width: 84%;
+  width: 81%;
 }
 
 form + table {

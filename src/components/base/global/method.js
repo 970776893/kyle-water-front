@@ -54,10 +54,10 @@ var globalMethod = {
     if (inAccess) {
       // 可以直接访问
       this.$router.push(currentPath)
-    } else if (loginPath !== currentPath && !this.$cookie.get('session')) {
+    } else if (loginPath !== currentPath && !this.$cookie.get('sessionj')) {
       // 当前页不是登录页，校验是否登录
       this.$router.push({ path: loginPath, query: { 'redirect': currentPath } })
-    } else if (loginPath === currentPath && this.$cookie.get('session')) {
+    } else if (loginPath === currentPath && this.$cookie.get('sessionj')) {
       // 当前是登录页，校验是否已登录
       this.$router.push('/')
     }
