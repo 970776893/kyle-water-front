@@ -8,6 +8,7 @@ import fileUpload from '@/components/base/global/file-upload.vue'
 import globalMethod from '@/components/base/global/method.js'
 import countdownButton from '@/components/base/global/countdown-button.vue'
 import urls from '@/components/base/urls.js'
+import constants from '@/components/base/constants.js'
 
 // 定义组件
 const directiveList = [
@@ -70,6 +71,11 @@ const directiveList = [
   {
     directiveName: 'urls',
     directiveComponent: urls,
+    type: 'prototype'
+  },
+  {
+    directiveName: 'consts',
+    directiveComponent: constants,
     type: 'prototype'
   }
 ]

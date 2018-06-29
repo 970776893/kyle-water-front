@@ -54,7 +54,7 @@
       // 登出操作
       logout () {
         this.$http.get(this.urls.logout)
-        this.$cookie.delete('session')
+        this.$cookie.delete(this.consts.session_key_login)
         this.$router.push('/login')
       }
     }

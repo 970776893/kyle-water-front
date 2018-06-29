@@ -40,7 +40,7 @@ var globalMethod = {
     var accessPath = ['/register', '/getbackPasswd']
     // 登录页面、
     var loginPath = '/login'
-
+    var sessionUser = this.$session.get(this.consts.session_key_login)
     // 当前路径
     var currentPath = this.$route.path
     var inAccess = false
@@ -54,10 +54,10 @@ var globalMethod = {
     if (inAccess) {
       // 可以直接访问
       this.$router.push(currentPath)
-    } else if (loginPath !== currentPath && !this.$cookie.get('sessionj')) {
+    } else if (loginPath !== currentPath && !sessionUser) {
       // 当前页不是登录页，校验是否登录
       this.$router.push({ path: loginPath, query: { 'redirect': currentPath } })
-    } else if (loginPath === currentPath && this.$cookie.get('sessionj')) {
+    } else if (loginPath === currentPath && sessionUser) {
       // 当前是登录页，校验是否已登录
       this.$router.push('/')
     }

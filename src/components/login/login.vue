@@ -71,9 +71,7 @@ export default {
           this.tipMsg = body.message
           return
         }
-	console.log(JSON.stringify(params))
-        this.$cookie.set('sessionj', JSON.stringify(params))
-	console.log(this.$cookie.get('sessionj'))
+        this.$cookie.set(this.consts.session_key_login, JSON.stringify(params))
         // 登录成功后跳转的页面
         var redirectUrl = this.$route.query.redirect
         var to = '/'
