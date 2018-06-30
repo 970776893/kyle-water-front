@@ -40,7 +40,7 @@ var globalMethod = {
     var accessPath = ['/register', '/getbackPasswd']
     // 登录页面、
     var loginPath = '/login'
-    var sessionUser = this.$session.get(this.consts.session_key_login)
+    var sessionUser = this.$cookie.get(this.consts.session_key_login)
     // 当前路径
     var currentPath = this.$route.path
     var inAccess = false
